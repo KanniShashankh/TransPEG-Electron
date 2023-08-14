@@ -5,9 +5,11 @@
   "license": "CMR",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
   },
   "devDependencies": {
-    "electron": "^25.5.0"
+    "@tailwindcss/typography": "^0.5.9",
+    "electron": "^25.5.0",
+    "tailwindcss": "^3.3.3"
   }
 }
