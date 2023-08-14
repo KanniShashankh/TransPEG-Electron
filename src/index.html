@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl font-bold">Welcome to Trans PEG!</h1>
+        <p class="py-6">Trans PEG is a service where we translate your video subtitles for you!</p>
+      </div>
+      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <form name="ipcForm" onSubmit="JavaScript:sendForm(event)">
+          <div class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Input file</span>
+              </label>
+              <input type="file" class="file-input file-input-bordered w-full max-w-xs" />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Format</span>
+              </label>
+              <select id="selectbox" class="select select-bordered w-full max-w-xs">
+                <option disabled selected>H.264</option>
+                <option>H.265</option>
+                <option>MOV</option>
+              </select>
+            </div>
+            <div class="form-control mt-6">
+              <button type="submit" class="btn btn-primary">Convert</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="./renderFile.cjs"></script>
+</body>
+
+</html>
